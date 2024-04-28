@@ -1,4 +1,7 @@
-# A simple RAG example using LM Studio Server #
+# main project
+This is fork from https://github.com/mahesh-tws/lmstudio-rag
+
+## A simple RAG example using LM Studio Server #
 
 Start LM Studio server running on port 1234.
 
