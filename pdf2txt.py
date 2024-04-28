@@ -1,8 +1,9 @@
 from PyPDF2 import PdfReader
 
 # Create a PdfFileReader object with the file
-pdf_reader = PdfReader("/home/kan/python/AutogenLangchainPDFchat/chat_docs4.pdf")
-data_directory = "./content"
+data_directory = "./content/"
+pdf_reader = PdfReader(data_directory + "chat_docs4.pdf")
+
 
 # Get the number of pages in the PDF
 num_pages = len(pdf_reader.pages)

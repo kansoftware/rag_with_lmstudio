@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 # Set for storing already visited urls
 visited_urls = set()
 
-data_directory = "./content"
+data_directory = "./content/"
 
 def get_page_content(url):
     """

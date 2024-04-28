@@ -5,10 +5,10 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from torch import cuda
 import sys
 
-path = "./content"
-embedding_directory = "./content/chroma_db"
+path = "./content/"
+embedding_directory = path + "chroma_db"
 
-embedding_db = None;
+embedding_db = None
 
 import os
 
@@ -47,14 +47,14 @@ def embed():
 
     # documents=loader.load()
 
-    document_txt = process_directory("./content/")
+    document_txt = process_directory(path)
     with open("/tmp/my.txt", 'w') as f:
         for line in document_txt:
             f.write(line)
 
 
     loaders = [
-        # PyPDFLoader('/home/kan/python/AutogenLangchainPDFchat/chat_docs4.pdf'),
+        # PyPDFLoader(path + 'chat_docs4.pdf'),
         TextLoader("/tmp/my1.txt")
     ]
     
@@ -89,7 +89,7 @@ def embed():
     embedding_db = Chroma.from_documents(chunks, embedding_model, persist_directory=embedding_directory)
 
 
-    # loaders = [PyPDFLoader('/home/kan/python/AutogenLangchainPDFchat/chat_docs4.pdf')]
+    # loaders = [PyPDFLoader(path + 'chat_docs4.pdf')]
     # docs = []
     # for file in loaders:
     #     docs.extend(file.load())

@@ -3,7 +3,7 @@ from embedder import embed
 from chat import startChat
 
 # Starting URL
-start_url = "https://www.kansoftware.ru/"
+start_url = "https:/you.site.here/"
 # Starting depth
 start_depth = 2
 
